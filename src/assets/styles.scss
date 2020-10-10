@@ -1,0 +1,127 @@
+$bgColor:#ffffff;
+
+
+nav {
+    box-shadow: none;
+    font-family: "Noe Display Bold"; 
+    background-color: $bgColor;
+  .nav-wrapper{
+      border: none;
+        .brand-logo{
+            padding:10px 0px 10px 120px;
+            font-size: 27px;
+            font-family: "Noe Display Bold"; 
+            font-weight: 700;
+        }
+        span{
+            color:#cc3333  ;
+        }
+  }
+  ul {
+    padding:0px 150px 0px 0px;
+      a{
+        color: #000;
+        font-size: 17px;
+        padding: 10px 50px 10px 50px;
+      }    
+  }
+
+}
+
+h5
+{
+    font-size: 1.44rem;
+    font-weight: 600;
+    font-family: "Noe Display Bold"; 
+}
+.sidenews{
+    margin: 0px 10px 0px 10px!important;
+}
+.mainnews{
+    margin: 0px 20px 0px 50px!important;
+}
+
+
+
+.sidestyle{
+    padding: 15px;
+    
+  .divider {
+        height: 0px;
+        background-color: none;
+    }
+    
+
+}
+.sidestyle:nth-child(odd) {
+    background: #ffeead;
+    a{
+        color: #000;
+    }
+    
+  }
+  .sidestyle:nth-child(2n+0) {
+    background: #F5B7B1;
+    a{
+        color: #000;
+    }
+  }
+  .sidestyle:nth-child(3n+0) {
+    background: #8d9db6;
+  }
+  .sidestyle:nth-child(5n+0) {
+    background: #484f4f;
+    a{
+        color:#ECF0F1 ;
+    }
+  }
+
+  .card{
+    .card-content {
+        background:#E5E7E9 ;
+        padding: 20px 14px 20px 14px;
+        color: #484f4f;
+        font-weight: bold;
+    }
+  }
+  .page-footer {
+    padding: 0px;
+    color: #000;
+    background-color: #fff;
+}
+  .footer-row{
+      margin-bottom: 0px!important;
+  }
+  .aboutme{
+      p{
+        font-size: 20px;
+        margin-bottom: 0px;
+        margin-top: 10px;
+      }
+    .name a {
+        span{
+            color:#cc3333  ;
+        }
+        text-decoration: none;
+        color: #161617;
+        letter-spacing: .00875em;
+        font-size: 25px;
+        font-weight: 900;
+        font-family: "Noe Display Bold"; 
+    }
+    .footer-bar a{
+       
+        color: #000;
+    }
+    .footer-bar .fa {
+        padding: 10px;
+        font-size: 20px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px;
+        
+    }
+        
+  }
+
+  
