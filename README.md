@@ -2,7 +2,7 @@
 
 ## This Project is Using News API from newsapi.org
 
- **Skills**
+ **Tech Stack**
    ```bash
 * JavaScript
 * React
