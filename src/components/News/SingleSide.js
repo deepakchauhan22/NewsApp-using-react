@@ -1,7 +1,8 @@
 import React from 'react';
 
 const SingleSide = ({item}) => (
-  <div className="sidestyle">
+ 
+  <div className="sidestyle hoverable">
     <div className="divider"></div>
     <a href={item.url} target="_blank">
       <div className="section">
@@ -10,6 +11,7 @@ const SingleSide = ({item}) => (
       </div>
     </a>
   </div>
+
 );
 
 export default SingleSide;

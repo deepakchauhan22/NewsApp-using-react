@@ -1,67 +1,62 @@
 import React, { Component } from 'react';
 import './App.css';
-import News from './components/News/News';
-import Sidenews from './components/News/Sidenews';
+import Main from './components/Main';
+import Business from './components/Business';
+import Health from './components/Health';
+import Sports from './components/Sports';
+import {Switch,Route, Redirect,BrowserRouter,NavLink} from 'react-router-dom';
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      news1: {
-        type: 'top-headlines',
-        query: 'sources=bbc-news'
-      },
-      news2: {
-        type: 'everything',
-        query: 'domains=techcrunch.com&language=en'
-      },
-      news3:{
-        type: 'top-headlines',
-        query: 'country=in'
-      },
-      news4:{
-        type: 'top-headlines',
-        query: 'country=in&category=technology'
-      }
-    };
-  }
-
-// http://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=2f5b88c782444575a24e7499ee1bd726
-  // http://newsapi.org/v2/top-headlines?country=in&apiKey=2f5b88c782444575a24e7499ee1bd726
-  //https://newsapi.org/v2/everything?domains=techcrunch.com,thenextweb.com&apiKey=2f5b88c782444575a24e7499ee1bd726
-
+ 
   render() {
     return (
+      
+      <BrowserRouter>
       <div className="container-fluid">
       
-        <nav>
-            <div class="nav-wrapper">
-              <a href="#" class="brand-logo black-text" ><i class="medium material-icons">menu</i><span>Break</span>N</a>
-              <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="sass.html">Business</a></li>
-                <li><a href="badges.html">Health</a></li>
-                <li><a href="collapsible.html">Sports</a></li>
+         <nav>
+            <div className="nav-wrapper">
+            <NavLink className="brand-logo black-text active " to= "/main">
+            <i className="medium material-icons barlogo">menu</i><span>Break</span>N
+                   </NavLink>
+                   <a href="#" class="sidenav-trigger black-text" data-target="mobile-nav">
+		              	<i class="material-icons">menu</i>
+	                	</a>
+             
+              <ul id="nav-mobile" className="right hide-on-med-and-down">
+                <li><NavLink  to= "/business">Business</NavLink></li>
+                <li><NavLink  to= "/health">Health</NavLink></li>
+                <li><NavLink  to= "/sports">Sports</NavLink></li>
               </ul>
             </div>
           </nav>
+          
+            <ul class="sidenav" id="mobile-nav">
+            <NavLink className="brand-logo black-text active" to= "/main">
+                    <span>Break</span>N
+                              </NavLink>
+                              <li><NavLink  to= "/business">Business</NavLink></li>
+                <li><NavLink  to= "/health">Health</NavLink></li>
+                <li><NavLink  to= "/sports">Sports</NavLink></li>
+                  
+            </ul>
+                    
         
-        <div className="row">
+
+          <Switch> 
+                <Route path="/main" component={Main} />
+                <Route path="/business" component={Business} />
+                <Route path="/health" component={Health}  />
+                <Route path="/sports" component = {Sports} />
+                  <Redirect to = "/main" />
+         </Switch>     
+
         
-          <div className="col s8 mainnews">
-            <h5>Main News</h5>
-            <News news={this.state.news1} />
-            <h5>Tech News</h5>
-            <News news={this.state.news2} />
-          </div>
-          <div className="col s3 sidenews">
-            <h5>Highlights</h5>
-            <Sidenews news={this.state.news3} />   
-            {/* Here news is passed as prop to sidenews component */}
-          </div>
-        </div>
-        <footer class="page-footer z-depth-3">
-          <div class="container">
-            <div class="row footer-row">
-              <div class="col s12 center-align">
+      
+
+        <footer className="page-footer z-depth-3">
+          <div className="container">
+            <div className="row footer-row">
+              <div className="col s12 center-align">
                   <div className="aboutme">
                       <p className= "name">A project by <a href="https://www.linkedin.com/in/deepakchauhan22/"><span>Deepak Chauhan</span></a></p>
             
@@ -82,6 +77,8 @@ class App extends Component {
         </footer>
             
       </div>
+      </BrowserRouter>
+     
     );
   }
 }

@@ -28,6 +28,22 @@ nav {
 
 }
 
+nav .sidenav-trigger i {
+  margin-top: 10px;
+}
+.sidenav{
+  font-family: "Noe Display Bold"; 
+  width: 200px;
+  .brand-logo{
+    padding:10px 20px 10px 20px;
+    font-size: 25px;
+    font-family: "Noe Display Bold"; 
+    font-weight: 700;
+}
+span{
+    color:#cc3333  ;
+}
+}
 h5
 {
     font-size: 1.44rem;
@@ -78,12 +94,30 @@ h5
 
   .card{
     .card-content {
+        height: 100px;
         background:#E5E7E9 ;
-        padding: 20px 14px 20px 14px;
+        padding: 7px 14px 20px 14px;
         color: #484f4f;
         font-weight: bold;
+        overflow: auto;  
     }
+     
   }
+
+.sidestyle{
+  .section h5{
+    white-space: nowrap;
+    overflow: hidden;  
+    text-overflow: ellipsis;
+  }
+}
+
+  // <div class="single-portfolio" style="max-height:300px;max-width:400px;overflow: hidden;">
+
+  // <img style="height:300px;width:400px;" class="img-responsive"  src="gallery/'.$folderName.'/'.$itemNum.'.jpg" alt="One" />
+
+
+
   .page-footer {
     padding: 0px;
     color: #000;
@@ -123,5 +157,167 @@ h5
     }
         
   }
+  .plaincard{
+    .card-content p{
+      padding: 10px;
+    }
+   
+  }
 
   
+  @media (min-width: 10px) and (max-width: 992px) {
+
+    .barlogo{
+      display: none!important;
+    }
+  }
+  
+ 
+  @media (min-width: 1450px) and (max-width: 1990px) {
+
+    .card .card-image img {
+      height: 180px;
+    }
+  }
+  @media (min-width: 1200px) and (max-width: 1449px) {
+
+    .card .card-image img {
+      height: 160px;
+    }
+  }
+
+  @media (min-width: 950px) and (max-width: 1199px) {
+
+    .card .card-image img {
+      height: 125px;
+    }
+    .card .card-content p {
+      font-size: 13.5px;
+  }
+  }
+
+  @media (min-width: 700px) and (max-width: 949px) {
+
+    .card .card-image img {
+      height: 95px;
+    }
+    .card .card-content {
+      padding: 7px 10px 10px 10px;
+    }
+    .card .card-content p {
+      font-size: 12px;
+  }
+  }
+  @media (min-width: 601px) and (max-width: 699px) {
+
+    .card .card-image img {
+      height: 75px;
+    }
+    .card .card-content {
+      padding: 7px 10px 10px 10px;
+    }
+    .card .card-content p {
+      font-size: 11px;
+  }
+  }
+  @media (min-width: 460px) and (max-width: 600px) {
+
+    .card .card-image img {
+      height: 150px;
+    }
+    .card .card-content {
+      padding: 7px 13px 10px 13px;
+    }
+    .card .card-content p {
+      font-size: 13px;
+  }
+  
+  }
+  @media (min-width: 301px) and (max-width: 459px) {
+
+    .card .card-image img {
+      height: 110px;
+    }
+    .card .card-content {
+      padding: 7px 13px 10px 13px;
+    }
+    .card .card-content p {
+      font-size: 12px;
+  }
+  }
+
+  /* And other times this */
+@media (min-width: 768px) and (max-width: 1090px) {
+
+  .sidenews{
+    margin: 0px 10px 0px 0px!important;
+}
+.mainnews{
+    margin: 0px 20px 0px 30px!important;
+}
+}
+
+@media (min-width: 601px) and (max-width: 767px) {
+
+  .sidenews{
+    margin: 0px 0px 0px 0px!important;
+}
+.mainnews{
+    margin: 0px 20px 0px 20px!important;
+}
+}
+@media (min-width: 300px) and (max-width: 600px) {
+
+  .sidenews{
+    margin: 0px 0px 0px 20px!important;
+}
+.mainnews{
+    margin: 0px 20px 0px 20px!important;
+}
+.aboutme p {
+  font-size: 15px;
+}
+.aboutme .name a {
+  font-size: 22px;
+}
+}
+
+@media (min-width: 100px) and (max-width: 299px) {
+
+  .aboutme p {
+    font-size: 15px;
+  }
+  .aboutme .name a {
+    font-size: 18px;
+  }
+
+  .sidenews{
+    margin: 0px 5px 0px 10px!important;
+}
+.mainnews{
+    margin: 0px 10px 0px 10px!important;
+}
+nav .nav-wrapper .brand-logo {
+  padding: 10px 0px 10px 10px;
+}
+.card .card-image img {
+  height: 65px;
+}
+
+}
+// @media (min-width: 200px) and (max-width: 499px) {
+//   .sidenews{
+//     margin: 0px 0px 0px 0px!important;
+// }
+// .mainnews{
+//     margin: 0px 20px 0px 20px!important;
+// }
+// }
+
+
+@media (min-width: 288px) and (max-width: 992px) {
+
+  nav .nav-wrapper .brand-logo {
+    padding: 10px 0px 10px 0px;
+  }
+}

@@ -1,14 +1,14 @@
 import React from 'react';
 
 const NewSingle =({item}) =>(
-    <div className="col s4">
-            <div className="card">
+    <div className="col s6 m4 l4">
+            <div className="card hoverable">
             <a href={item.url} target="_blank">
                   <div className="card-image">
-                      <img src={item.urlToImage} alt={item.title} />
+                      <img class="responsive-img" height="200" src={item.urlToImage} alt={item.title} />
                       {/* <span className="card-title"> {item.source.name}</span> */}
                   </div>
-                  <div class="card-content">
+                  <div className="card-content">
                     <p>{item.title}</p>
                   </div>
                   </a>

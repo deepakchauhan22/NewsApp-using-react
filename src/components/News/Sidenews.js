@@ -16,7 +16,7 @@ class Sidenews extends Component {
 
   componentDidMount() {
     const url = `https://newsapi.org/v2/${this.props.news.type}?${this.props.news.query}&apiKey=2f5b88c782444575a24e7499ee1bd726`;
-   
+  
     // axios.post(url,{
     //     data:{
     //         news:{
@@ -53,7 +53,7 @@ class Sidenews extends Component {
 
   render() {
     return (
-      <div>
+      <div className="row">
         {this.renderItems()}
       </div>
     );
